@@ -58,3 +58,41 @@ img {
     background-color: rgb(46, 64, 223);
 }
 
+.title {
+    width: 500px;
+    max-width: 90%;
+    height: auto;
+}
+
+#story {
+    width: 100%;
+}
+
+.story-page {
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    font-weight: bold;
+    padding: 120px 40px 60px;
+}
+
+.page-content {
+    width: 90%;
+    max-width: 800px;
+}
+
+.page-content h1{
+    font-size: clamp(55px, 8vw, 110px);
+    margin: 0 0 20px;
+}
+
+.page-content p {
+    max-width: 650px;
+    margin: 12px auto;
+    font-size: 20px;
+    line-height: 1.6;
+}
+
