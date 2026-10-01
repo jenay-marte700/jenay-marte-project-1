@@ -113,6 +113,20 @@ img {
     width: 300px;
 }
 
+.page-two-images {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+    width: 100%;
+    margin: 30px auto;
+}
+
+.page-two-images img {
+    width: 30%;
+    max-width: 200px;
+    height: auto;
+}
 
 .story-percentage {
     font-size: 20px;

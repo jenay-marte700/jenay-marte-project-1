@@ -108,12 +108,12 @@ window.addEventListener("scroll", function() {
     if (miniProgress < 40) {
 
         miniLoadingFill.style.backgroundColor =
-            "#de0000";
+            "#de5900";
 
     } else {
 
         miniLoadingFill.style.backgroundColor =
-            "#de7e00";
+            "#debd00";
 
     }
 
