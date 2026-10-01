@@ -12,6 +12,14 @@ html, body {
 
 body {
    overflow-x: hidden;
+   background: linear-gradient(
+        to bottom,
+        #a72a17 0%,
+        #c12e0d 15%,
+        #de7e00 34%,
+        #dfc207 75%,
+        #008000 100%
+    );
 }
 
 img {
@@ -64,6 +72,10 @@ img {
     height: auto;
 }
 
+
+
+
+
 #story {
     width: 100%;
 }
@@ -104,6 +116,78 @@ img {
 
 .story-percentage {
     font-size: 20px;
-    color: rgb(35, 103, 193);
+    color: rgb(255, 255, 255);
+    margin-top: 20px;
 }
+
+.character {
+    width: 300px;
+    height: auto;
+}
+
+.mini-loading-area {
+    width: 400px;
+    max-width: 40%;
+    height: 45px;
+    margin: 30px auto;
+    background-color: white;
+    border: 3px solid black;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+#miniLoadingFill {
+    width: 0%;
+    height: 100%;
+    background-color: rgb(255, 255, 255);
+}
+
+.folder-button {
+    width: 250px;
+    cursor: pointer;
+}
+
+#photos {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    height: 250px;
+    margin-top: 20px;
+}
+
+.photo {
+    width: 30%;
+    max-width: 200px;
+    height: auto;
+    opacity: 0;
+    transform: translateY(50px);
+}
+
+#endingText {
+    margin-top: 30px;
+}
+
+@media (max-width: 600px) {
+
+    .top-loadingbar {
+        padding: 10px 15px;
+    }
+    .logo img {
+        width: 80px;
+    }
+    .story-page {
+        padding: 120px 20px 50px;
+    }
+    .character {
+        width: 220px;
+    }
+    .page-content p {
+        font-size: 18px;
+    }
+    .photo {
+        width: 100px;
+
+    }
+}
+
 
