@@ -67,8 +67,8 @@ img {
 }
 
 .title {
-    width: 500px;
-    max-width: 90%;
+    width: 800px;
+    max-width: 100%;
     height: auto;
 }
 
@@ -163,10 +163,11 @@ img {
 
 #photos {
     display: flex;
-    justify-content: space-around;
+    justify-content: center;
     align-items: center;
-    height: 250px;
-    margin-top: 20px;
+    gap: 30px;
+    width: 100%;
+    margin: 30px auto;
 }
 
 .photo {

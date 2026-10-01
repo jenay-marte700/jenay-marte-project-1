@@ -1,18 +1,28 @@
-
-// TOP LOADING BAR
+// loading bar at the top
 
 const loadingFill = document.getElementById("loadingFill");
 const percentage = document.getElementById("percentage");
 
 
-// MINI LOADING BAR
+// mini loading bar
 
 const miniLoadingFill = document.getElementById("miniLoadingFill");
 
 
-// TITLE BOUNCE
+// title
 
 const title = document.querySelector(".title");
+
+
+// folder photos sound
+
+const folder = document.getElementById("folder");
+const photos = document.querySelectorAll(".photo");
+const friends = document.getElementById("friends");
+const clickSound = document.getElementById("clickSound");
+ 
+
+// jumping title
 
 title.animate(
     [
@@ -28,19 +38,38 @@ title.animate(
 );
 
 
-// CHARACTERS
+// jumping folder
+
+folder.animate(
+    [
+        { transform: "translateY(0px)" },
+        { transform: "translateY(-8px)" },
+        { transform: "translateY(0px)" }
+    ],
+    {
+        duration: 900,
+        iterations: Infinity,
+        easing: "ease-in-out"
+    }
+);
+
+friends.animate(
+    [
+        { transform: "translateY(0px)" },
+        { transform: "translateY(-8px)" },
+        { transform: "translateY(0px)" }
+    ],
+    {
+        duration: 900,
+        iterations: Infinity,
+        easing: "ease-in-out"
+    }
+);
+
+
+// characters
 
 const characters = document.querySelectorAll(".fade-character");
-
-
-// FOLDER, PHOTOS, AND SOUND
-
-const folder = document.getElementById("folder");
-const photos = document.querySelectorAll(".photo");
-const clickSound = document.getElementById("clickSound");
-
-
-// HIDE CHARACTERS AT THE BEGINNING
 
 characters.forEach(function(character) {
 
@@ -52,11 +81,11 @@ characters.forEach(function(character) {
 });
 
 
-// SCROLL FUNCTION
+// scroll
 
 window.addEventListener("scroll", function() {
 
-    // TOP LOADING BAR
+    // top loading bar
 
     let scrollTop = window.scrollY;
 
@@ -75,7 +104,7 @@ window.addEventListener("scroll", function() {
         Math.round(progress) + "%";
 
 
-    // MINI LOADING BAR
+    // mini loading bar
 
     const pageTwo =
         document.querySelector(".section-two");
@@ -87,13 +116,9 @@ window.addEventListener("scroll", function() {
         pageTwo.offsetHeight;
 
 
-    // Starts at 20% and reaches 100%
-
     let miniProgress =
         20 + ((window.scrollY - pageTwoTop) / pageTwoHeight) * 80;
 
-
-    // Keep the mini bar between 20% and 100%
 
     miniProgress =
         Math.max(20, Math.min(100, miniProgress));
@@ -103,7 +128,7 @@ window.addEventListener("scroll", function() {
         miniProgress + "%";
 
 
-    // MINI BAR COLOR
+    // mini bar color change
 
     if (miniProgress < 40) {
 
@@ -118,7 +143,7 @@ window.addEventListener("scroll", function() {
     }
 
 
-    // CHARACTER ANIMATIONS
+    // fade up
 
     characters.forEach(function(character) {
 
@@ -141,16 +166,11 @@ window.addEventListener("scroll", function() {
 });
 
 
-// CLICK FOLDER
+// click the folder to see inside
 
 folder.addEventListener("click", function() {
 
-    // Play click sound
-
     clickSound.play();
-
-
-    // Show photos
 
     photos.forEach(function(photo) {
 
